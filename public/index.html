@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Site Checker: Free Broken Link Tool</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Site Checker: Free Broken Link Tool</h1>
+
+    <section class="controls">
+      <input id="urlInput" type="url" placeholder="https://example.com" />
+      <div class="modes">
+        <label><input type="radio" name="mode" value="whole" checked /> Check whole website</label>
+        <label><input type="radio" name="mode" value="single" /> Check single webpage</label>
+      </div>
+      <div class="buttons">
+        <button id="checkBtn">Check</button>
+        <button id="pauseBtn" disabled>Pause</button>
+        <button id="stopBtn" disabled>Stop</button>
+        <button id="exportBtn" disabled>Export CSV</button>
+      </div>
+      <label class="filter">
+        <input id="brokenOnly" type="checkbox" /> Show broken links only
+      </label>
+    </section>
+
+    <section class="progress-section">
+      <div class="progress-text" id="progressText">0% scanned - 0/0 URLs checked</div>
+      <div class="progress-text" id="statsText">0 OK, 0 failed, 0 redirect</div>
+      <div class="progress-text" id="currentText">Checking file: -</div>
+      <div class="progress-bar-wrap"><div id="progressBar" class="progress-bar"></div></div>
+    </section>
+
+    <section class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Status</th>
+            <th>URL</th>
+            <th>Source Link Text</th>
+          </tr>
+        </thead>
+        <tbody id="resultsBody"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
