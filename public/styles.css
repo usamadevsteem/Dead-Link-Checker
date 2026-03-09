@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f7f7f9;
+}
+.container {
+  max-width: 1100px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+.controls input[type="url"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+.modes {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 12px;
+}
+.buttons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+button {
+  padding: 8px 14px;
+  cursor: pointer;
+}
+.progress-bar-wrap {
+  width: 100%;
+  height: 16px;
+  background: #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background: #2b7cff;
+  transition: width 0.2s ease;
+}
+.progress-text {
+  margin: 8px 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 14px;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+.status-ok { color: #148f2d; font-weight: bold; }
+.status-redirect { color: #d17a00; font-weight: bold; }
+.status-broken { color: #cc2a2a; font-weight: bold; }
+.status-checking { color: #3068c7; }
